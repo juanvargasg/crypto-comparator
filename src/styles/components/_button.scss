@@ -1,0 +1,33 @@
+.btn {
+  display: inline-block;
+  font-weight: normal;
+  color: $color-text;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0.563rem 2rem;
+  font-size: 1rem;
+  border-radius: $border-radius;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+
+  &:disabled,
+  &.disabled,
+  fieldset:disabled & {
+    pointer-events: none;
+    opacity: 0.65;
+  }
+}
+
+.btn-secondary {
+  color: $white;
+  background-color: $secondary;
+  border-color: $secondary;
+  &:hover {
+    background-color: $secondary-dark;
+    border-color: $secondary-dark;
+  }
+}

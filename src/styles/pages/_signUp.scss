@@ -1,0 +1,58 @@
+.sign-up {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  padding: 1rem;
+
+  strong.text-secondary {
+    margin-bottom: 1rem;
+  }
+
+  .sign-up-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: $breakpoint-sm) {
+  .sign-up {
+    .sign-up-form {
+      flex: 1;
+      align-items: flex-end;
+
+      .form-group {
+        width: 100%;
+      }
+
+      .btn {
+        width: auto;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint-md) {
+  .sign-up {
+    align-items: center;
+
+    .sign-up-form {
+      width: 50%;
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint-lg) {
+  .sign-up {
+    align-items: flex-start;
+    background-image: url('../../images/signupBgWeb.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+
+    .sign-up-form {
+      width: 50%;
+    }
+  }
+}

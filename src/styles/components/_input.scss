@@ -1,0 +1,52 @@
+%valid-label {
+  bottom: calc(100% - 0.275rem);
+  font-size: 0.8rem;
+  color: $primary;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 1rem;
+
+  &>label {
+    display: inline-block;
+    bottom: calc(50% - 0.5rem);
+    left: $input-padding-x - 0.2rem;
+    position: absolute;
+    background-color: $white;
+    padding: 0 0.2rem;
+    transition: 0.2s;
+    pointer-events: none;
+    color: $gray;
+  }
+
+  .form-control {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: $input-padding-y $input-padding-x;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: $line-height;
+    color: $color-text;
+    background-color: $white;
+    background-clip: padding-box;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    appearance: none;
+
+    &:focus {
+      border-color: $primary-light;
+      outline: 0;
+      box-shadow: 0 0 0 0.1rem rgba($primary-light, 0.25);
+      &~label {
+        @extend %valid-label;
+      }
+    }
+
+    &:valid~label {
+      @extend %valid-label;
+    }
+  }
+}
