@@ -6,7 +6,7 @@
 
 .form-group {
   position: relative;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 
   &>label {
     display: inline-block;
@@ -18,6 +18,11 @@
     transition: 0.2s;
     pointer-events: none;
     color: $gray;
+  }
+
+  &>.invalid-feedback {
+    position: absolute;
+    left: $input-padding-x;
   }
 
   .form-control {
@@ -35,6 +40,9 @@
     border-radius: $border-radius;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     appearance: none;
+    &.invalid {
+      border-color: $danger;
+    }
 
     &:focus {
       border-color: $primary-light;
@@ -48,5 +56,10 @@
     &:valid~label {
       @extend %valid-label;
     }
+  }
+
+  .invalid-feedback {
+    color: $danger;
+
   }
 }

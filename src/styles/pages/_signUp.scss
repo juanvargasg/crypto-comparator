@@ -1,58 +1,105 @@
-.sign-up {
+.container {
   display: flex;
-  flex-direction: column;
   height: 100vh;
   width: 100vw;
   padding: 1rem;
+  background-image: url('../../images/signupBgWeb.png');
+  background-repeat: no-repeat;
+  background-position: right -50vw bottom;
+  background-size: contain;
 
-  strong.text-secondary {
-    margin-bottom: 1rem;
-  }
-
-  .sign-up-form {
+  .sign-up {
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-  }
-}
+    justify-content: center;
 
-@media screen and (min-width: $breakpoint-sm) {
-  .sign-up {
+    .title {
+      margin-bottom: 2rem;
+      h1 {
+        margin-top: 0;
+      }
+    }
+  
     .sign-up-form {
-      flex: 1;
-      align-items: flex-end;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      margin-top: 1rem;
 
-      .form-group {
+      .name {
         width: 100%;
       }
 
       .btn {
-        width: auto;
+        margin-top: 1rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint-sm) {
+  .container {
+    background-size: cover;
+    .sign-up {
+      .sign-up-form {
+        align-items: flex-end;
+
+        .two-columns {
+          width: 100%;
+          display: flex;
+
+          .form-group {
+            flex: 1;
+            &:first-child {
+              margin-right: 0.5rem;
+            }
+            &:last-child {
+              margin-left: 0.5rem;
+            }
+          }
+        }
+
+        .form-group {
+          width: 100%;
+        }
+
+        .btn {
+          width: auto;
+        }
       }
     }
   }
 }
 
 @media screen and (min-width: $breakpoint-md) {
-  .sign-up {
-    align-items: center;
-
-    .sign-up-form {
+  .container {
+    .sign-up {
       width: 50%;
     }
   }
 }
 
 @media screen and (min-width: $breakpoint-lg) {
-  .sign-up {
-    align-items: flex-start;
-    background-image: url('../../images/signupBgWeb.png');
-    background-repeat: no-repeat;
+  .container {
+    .sign-up {
+      padding: 0 2rem;
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint-xl) {
+  .container {
     background-position: right;
     background-size: contain;
+  }
+}
 
-    .sign-up-form {
-      width: 50%;
+@media screen and (min-width: $breakpoint-xxl) {
+  .container {
+    .sign-up {
+      padding: 0 5%;
     }
   }
 }
