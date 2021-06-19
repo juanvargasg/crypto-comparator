@@ -1,5 +1,10 @@
 import React from 'react';
 
-const Icon = ({name}) => <i className={`fas fa-${name}`}></i>
+/**
+ * Fontawesome icon
+ * @param {string} name Icon name
+ * @returns Component
+ */
+const Icon = ({name, brandStyle = "fas"}) => <i className={`${brandStyle} fa-${name}`}></i>
 
 export default Icon;

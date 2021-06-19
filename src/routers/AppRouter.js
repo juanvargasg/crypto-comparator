@@ -1,15 +1,16 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Dashboard from '../pages/Dashboard';
 import Error404 from '../pages/Error404';
 import SignUp from '../pages/SignUp';
-import AuthContext from '../contexts/AuthContext';
 import PrivateRoute from './PrivateRoute';
 import PublicRoute from './PublicRoute';
 
+/**
+ * Component for application navigation
+ * consists of private and public routes
+ */
 const AppRouter = () => {
-  const {auth} = useContext(AuthContext);
-
   return (
     <Router>
       <Switch>

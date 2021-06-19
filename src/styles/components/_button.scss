@@ -9,7 +9,7 @@
   user-select: none;
   background-color: transparent;
   border: 1px solid transparent;
-  padding: 0.563rem 2rem;
+  padding: 0.563rem 1rem;
   font-size: 1rem;
   border-radius: $border-radius;
   transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
@@ -22,6 +22,16 @@
   }
 }
 
+.btn-primary {
+  color: $white;
+  background-color: $primary;
+  border-color: $primary;
+  &:hover {
+    background-color: $primary-dark;
+    border-color: $primary-dark;
+  }
+}
+
 .btn-secondary {
   color: $white;
   background-color: $secondary;
@@ -29,5 +39,15 @@
   &:hover {
     background-color: $secondary-dark;
     border-color: $secondary-dark;
+  }
+}
+
+.btn-white {
+  color: $color-text;
+  background-color: $white;
+  border-color: $gray-light;
+  &:hover {
+    background-color: $gray-light;
+    border-color: $gray-light;
   }
 }

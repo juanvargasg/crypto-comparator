@@ -1,4 +1,4 @@
-.container {
+.sign-up-container {
   display: flex;
   height: 100vh;
   width: 100vw;
@@ -40,7 +40,7 @@
 }
 
 @media screen and (min-width: $breakpoint-sm) {
-  .container {
+  .sign-up-container {
     background-size: cover;
     .sign-up {
       .sign-up-form {
@@ -74,7 +74,7 @@
 }
 
 @media screen and (min-width: $breakpoint-md) {
-  .container {
+  .sign-up-container {
     .sign-up {
       width: 50%;
     }
@@ -82,7 +82,7 @@
 }
 
 @media screen and (min-width: $breakpoint-lg) {
-  .container {
+  .sign-up-container {
     .sign-up {
       padding: 0 2rem;
     }
@@ -90,14 +90,14 @@
 }
 
 @media screen and (min-width: $breakpoint-xl) {
-  .container {
+  .sign-up-container {
     background-position: right;
     background-size: contain;
   }
 }
 
 @media screen and (min-width: $breakpoint-xxl) {
-  .container {
+  .sign-up-container {
     .sign-up {
       padding: 0 5%;
     }
