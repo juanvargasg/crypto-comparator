@@ -6,7 +6,7 @@ This project was made by Juan Vargas
 
 To install dependencies run the command
 
-### yarn
+### `yarn`
 
 ## Available Scripts
 
